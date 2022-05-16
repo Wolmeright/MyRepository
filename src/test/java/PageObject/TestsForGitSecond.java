@@ -1,5 +1,6 @@
 package PageObject;
 
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -52,5 +53,27 @@ public class TestsForGitSecond extends TestInit {
         sleep(3);
 
         Assert.assertTrue(homePage.takeOut().isDisplayed());
+    }
+    @Test
+    public void addNewAddressToMyAccount() {
+        HomePage homePage = new HomePage(driver);
+        openSite("https://qa2.eatstreet.com/");
+        homePage.buttonGotIt().click();
+        homePage.buttonSignIn().click();
+        homePage.enterEmail().sendKeys("thetallos7@gmail.com");
+        homePage.enterPassword().sendKeys("EATstreet192837465a");
+        homePage.acceptSighIn().click();
+        sleep(5);
+        homePage.buttonMyAccount().click();
+        sleep(3);
+        homePage.addNewAdressButton().click();
+        sleep(3);
+        homePage.streetAddressString().sendKeys("Homer Simpson avenue");
+        homePage.apt_suiteString().sendKeys("24/24");
+        homePage.cityString().sendKeys("Springfield");
+        homePage.stateString().sendKeys("Our State");
+        homePage.zipString().sendKeys("43024");
+        homePage.addressLabelString().sendKeys("//input[@name='name']");
+        homePage.newAddressSaveButton().sendKeys(Keys.ENTER);
     }
 }
