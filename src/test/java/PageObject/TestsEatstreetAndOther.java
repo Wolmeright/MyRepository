@@ -56,6 +56,7 @@ public class TestsEatstreetAndOther extends TestInit {
 
         Assert.assertTrue(homePage.submitButton().isDisplayed());
     }
+
     @Test
     public void addNewAddressToMyAccount() {
         HomePage homePage = new HomePage(driver);
@@ -78,6 +79,7 @@ public class TestsEatstreetAndOther extends TestInit {
         homePage.addressLabelString().sendKeys("//input[@name='name']");
         homePage.newAddressSaveButton().sendKeys(Keys.ENTER);
     }
+
     @Test
     public void newTests() {
         HomePage homePage = new HomePage(driver);
@@ -100,6 +102,7 @@ public class TestsEatstreetAndOther extends TestInit {
 
         Assert.assertTrue(homePage.menuButton().isDisplayed());
     }
+
     @Test
     public void checkEbayLogInAndHat() {
         HomePage homePage = new HomePage(driver);
@@ -118,6 +121,7 @@ public class TestsEatstreetAndOther extends TestInit {
         homePage.submitPriceRangeButton().click();
         homePage.buyItNowFilter().click();
     }
+
     @Test
     public void checkEbayGuitarsLesPaulStandart() {
         HomePage homePage = new HomePage(driver);
@@ -136,6 +140,7 @@ public class TestsEatstreetAndOther extends TestInit {
 
         Assert.assertTrue(homePage.lesPaulStandardButton().isDisplayed());
     }
+
     @Test
     public void checkEbayJordanSneakers() {
         HomePage homePage = new HomePage(driver);
@@ -152,6 +157,7 @@ public class TestsEatstreetAndOther extends TestInit {
 
         Assert.assertTrue(homePage.jordanSneakers().isDisplayed());
     }
+
     @Test
     public void battleNetShop() {
         HomePage homePage = new HomePage(driver);
@@ -184,6 +190,7 @@ public class TestsEatstreetAndOther extends TestInit {
 
         Assert.assertTrue(homePage.buyNowReforgedIIIButton().isDisplayed());
     }
+
     @Test
     public void eatstreetSocialMediaWindows() {
         HomePage homePage = new HomePage(driver);

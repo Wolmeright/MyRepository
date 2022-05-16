@@ -28,7 +28,8 @@ public class TestInit {
             e.printStackTrace();
         }
     }
-    public void openSite(String site){
+
+    public void openSite(String site) {
         driver.get(site);
     }
 }

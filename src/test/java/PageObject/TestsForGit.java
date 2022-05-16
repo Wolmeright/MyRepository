@@ -3,7 +3,8 @@ package PageObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestsForGit extends TestInit{
+public class TestsForGit extends TestInit {
+
     @Test
     public void checkEatstreetSignIn() {
         HomePage homePage = new HomePage(driver);
