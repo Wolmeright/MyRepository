@@ -32,4 +32,25 @@ public class TestsForGitSecond extends TestInit {
 
         Assert.assertTrue(homePage.submitButton().isDisplayed());
     }
+    @Test
+    public void clickDeliveryHustonAsian() {
+        HomePage homePage = new HomePage(driver);
+        openSite("https://qa2.eatstreet.com/");
+        homePage.buttonGotIt().click();
+        homePage.buttonSignIn().click();
+        homePage.enterEmail().sendKeys("thetallos7@gmail.com");
+        homePage.enterPassword().sendKeys("EATstreet192837465a");
+        homePage.acceptSighIn().click();
+        sleep(3);
+        homePage.takeHustonTX().click();
+        sleep(3);
+        homePage.takeAsianFood().click();
+        sleep(3);
+        homePage.categorySelectJapanesFood().click();
+        sleep(3);
+        homePage.takeAsianChefRestaurant().click();
+        sleep(3);
+
+        Assert.assertTrue(homePage.takeOut().isDisplayed());
+    }
 }
