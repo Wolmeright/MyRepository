@@ -151,4 +151,37 @@ public class TestsForGitSecond extends TestInit {
 
         Assert.assertTrue(homePage.jordanSneakers().isDisplayed());
     }
+
+    @Test
+    public void battleNetShop() {
+        HomePage homePage = new HomePage(driver);
+        openSite("https://eu.shop.battle.net/en-gb");
+        sleep(3);
+        homePage.checkWorldOfWarcraftGame().click();
+        driver.navigate().back();
+        sleep(5);
+        homePage.checkWorldOfWarcraftClassicGame().click();
+        driver.navigate().back();
+        sleep(3);
+        homePage.checkHearthstoneGame().click();
+        driver.navigate().back();
+        sleep(3);
+        homePage.checkOverwatchGame().click();
+        driver.navigate().back();
+        sleep(3);
+        homePage.checkDiabloImmortalGame().click();
+        driver.navigate().back();
+        sleep(3);
+        homePage.checkDiabloIIResurrectedGame().click();
+        driver.navigate().back();
+        sleep(3);
+        homePage.checkDiabloIIIGame().click();
+        driver.navigate().back();
+        homePage.checkWarcraftIII().click();
+        sleep(3);
+        homePage.wrctReforgedIcon().click();
+        sleep(3);
+
+        Assert.assertTrue(homePage.buyNowReforgedIIIButton().isDisplayed());
+    }
 }
