@@ -11,19 +11,6 @@ import java.util.Set;
 public class TestsEatstreetAndOther extends TestInit {
 
     @Test
-    public void checkEatstreet() {
-        HomePage homePage = new HomePage(driver);
-        openSite("https://qa2.eatstreet.com/");
-        homePage.buttonSignIn().click();
-        homePage.enterEmail().sendKeys("thetallos7@gmail.com");
-        homePage.enterPassword().sendKeys("EATstreet192837465a");
-        homePage.buttonGotIt().click();
-        homePage.acceptSighIn().click();
-        sleep(3);
-
-        Assert.assertTrue(homePage.myAccount().isDisplayed());
-    }
-    @Test
     public void clickDeliveryHustonAsian() {
         HomePage homePage = new HomePage(driver);
         openSite("https://qa2.eatstreet.com/");
