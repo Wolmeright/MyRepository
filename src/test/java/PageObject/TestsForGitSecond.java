@@ -76,4 +76,26 @@ public class TestsForGitSecond extends TestInit {
         homePage.addressLabelString().sendKeys("//input[@name='name']");
         homePage.newAddressSaveButton().sendKeys(Keys.ENTER);
     }
+    @Test
+    public void eatstreetChefRestourantTest() {
+        HomePage homePage = new HomePage(driver);
+        openSite("https://qa2.eatstreet.com/");
+        homePage.buttonGotIt().click();
+        homePage.buttonSignIn().click();
+        homePage.enterEmail().sendKeys("thetallos7@gmail.com");
+        homePage.enterPassword().sendKeys("EATstreet192837465a");
+        homePage.acceptSighIn().click();
+        sleep(5);
+        homePage.buttonMyAccount().click();
+        sleep(3);
+        homePage.enterYourAddressString().sendKeys("Huston");
+        homePage.enterYourAddressString().sendKeys(Keys.ENTER);
+        sleep(4);
+        homePage.select4stars().click();
+        homePage.selectCategoriesChineseFood().click();
+        homePage.selectTheChefRestaurant().click();
+        sleep(3);
+
+        Assert.assertTrue(homePage.menuButton().isDisplayed());
+    }
 }
