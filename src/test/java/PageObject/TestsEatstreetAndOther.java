@@ -198,7 +198,7 @@ public class TestsEatstreetAndOther extends TestInit {
         Assert.assertTrue(homePage.buyNowReforgedIIIButton().isDisplayed());
     }
     @Test
-    public void eatstreetSMwindows() {
+    public void eatstreetSocialMediaWindows() {
         HomePage homePage = new HomePage(driver);
         openSite("https://qa2.eatstreet.com/");
         homePage.buttonGotIt().click();
@@ -223,5 +223,7 @@ public class TestsEatstreetAndOther extends TestInit {
         sleep(1);
         driver.switchTo().window(windowsSMIconsList.get(3));
         sleep(1);
+
+        Assert.assertTrue(driver.getCurrentUrl().contains("facebook"));
     }
 }
