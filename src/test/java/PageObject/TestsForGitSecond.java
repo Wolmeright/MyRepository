@@ -116,4 +116,22 @@ public class TestsForGitSecond extends TestInit {
         homePage.submitPriceRangeButton().click();
         homePage.buyItNowFilter().click();
     }
+    @Test
+    public void checkEbayGuitarsLesPaulStandart() {
+        HomePage homePage = new HomePage(driver);
+        openSite("https://www.ebay.com/");
+        homePage.ebaySighInButton().click();
+        sleep(3);
+        homePage.emailOrUsernameString().sendKeys("Thetallos7@gmail.com");
+        homePage.continueSighInButton().click();
+        sleep(3);
+        homePage.ebayPasswordString().sendKeys("EBAY192837465a");
+        homePage.ebaySighInConntinueButton().sendKeys(Keys.ENTER);
+        homePage.shopByCategoryButton().click();
+        homePage.selectGuitarCategory().click();
+        homePage.selectElectricGuitars().click();
+        homePage.selectGibsonCategory().click();
+
+        Assert.assertTrue(homePage.lesPaulStandardButton().isDisplayed());
+    }
 }
