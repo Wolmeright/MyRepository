@@ -134,4 +134,21 @@ public class TestsForGitSecond extends TestInit {
 
         Assert.assertTrue(homePage.lesPaulStandardButton().isDisplayed());
     }
+
+    @Test
+    public void checkEbayJordanSneakers() {
+        HomePage homePage = new HomePage(driver);
+        openSite("https://www.ebay.com/");
+        homePage.ebaySighInButton().click();
+        sleep(3);
+        homePage.emailOrUsernameString().sendKeys("Thetallos7@gmail.com");
+        homePage.continueSighInButton().click();
+        sleep(3);
+        homePage.ebayPasswordString().sendKeys("EBAY192837465a");
+        homePage.ebaySighInConntinueButton().sendKeys(Keys.ENTER);
+        homePage.takeSnickersButton().click();
+        homePage.takeJordanXTravisScott().click();
+
+        Assert.assertTrue(homePage.jordanSneakers().isDisplayed());
+    }
 }
