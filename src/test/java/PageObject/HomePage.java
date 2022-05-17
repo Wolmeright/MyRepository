@@ -252,4 +252,8 @@ public class HomePage extends BasePage {
     public WebElement instagramIcon() {
         return driver.findElement(By.xpath("//a[@class='es-footer__icon es-footer__icon--instagram']"));
     }
+
+    public WebElement eatstreetTwitterIcon() {
+        return driver.findElement(By.xpath("//div[contains(@class,'t r-1pz')]"));
+    }
 }
