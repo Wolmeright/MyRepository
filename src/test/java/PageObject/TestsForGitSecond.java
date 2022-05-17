@@ -214,4 +214,36 @@ public class TestsForGitSecond extends TestInit {
 
         Assert.assertTrue(driver.getCurrentUrl().contains("facebook"));
     }
+
+    @Test
+    public void somethingDoing() {
+        HomePage homePage = new HomePage(driver);
+        openSite("https://qa2.eatstreet.com/");
+        homePage.buttonGotIt().click();
+        homePage.buttonSignIn().click();
+        homePage.enterEmail().sendKeys("thetallos7@gmail.com");
+        homePage.enterPassword().sendKeys("EATstreet192837465a");
+        homePage.acceptSighIn().click();
+        sleep(2);
+        homePage.facebookIcon().click();
+        sleep(2);
+        homePage.twitterIcon().click();
+        sleep(2);
+        homePage.instagramIcon().click();
+        sleep(2);
+        Set<String> windowsSMIconds = driver.getWindowHandles();
+        List<String> windowsSMIconsList = new ArrayList<String>(windowsSMIconds);
+        driver.switchTo().window(windowsSMIconsList.get(0));
+        sleep(1);
+        driver.switchTo().window(windowsSMIconsList.get(3));
+        sleep(1);
+        driver.switchTo().window(windowsSMIconsList.get(2));
+        sleep(1);
+        driver.switchTo().window(windowsSMIconsList.get(1));
+        driver.close();
+        sleep(1);
+        driver.switchTo().window(windowsSMIconsList.get(2));
+
+        Assert.assertTrue(homePage.eatstreetTwitterIcon().isDisplayed());
+    }
 }
